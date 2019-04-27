@@ -1,0 +1,8 @@
+
+<div *ngIf="!editing">
+<span>{{cell}}</span>
+</div>
+
+<div *ngIf="editing">
+<input [(ngModel)]="cell">
+</div>

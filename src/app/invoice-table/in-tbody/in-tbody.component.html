@@ -1,0 +1,10 @@
+<tr *ngFor="let row of data;let i=index">
+  <td *ngFor="let item of row.data | keyvalue : keyDescOrder">
+    <app-in-cell [cell]="item.value" [editing]="row.isEditing">
+    </app-in-cell>
+  </td>
+  <td>
+    <app-in-edit-delete [row]="row" >
+    </app-in-edit-delete>
+  </td>
+</tr>

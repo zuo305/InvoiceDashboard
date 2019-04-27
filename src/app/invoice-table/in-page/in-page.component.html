@@ -1,0 +1,19 @@
+<nav >
+  <ul class="pagination">
+    <li class="page-item" >
+      <a class="page-link" href="#">
+        <span>&lt;</span>
+      </a>
+    </li>
+    <li class="page-item" *ngFor="let page of arrayOne(pagesetting.pages);let i=index">
+      <a href="#" (click)="selectPageItem(i)">
+        <span>{{i+1}}</span>
+      </a>
+    </li>
+    <li class="page-item" >
+      <a href="#">
+        <span>&gt;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

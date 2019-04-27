@@ -1,0 +1,18 @@
+table {
+  line-height: 1.5em;
+  border-spacing: 0;
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+
+
+
+

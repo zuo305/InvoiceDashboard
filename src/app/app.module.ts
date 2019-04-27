@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { InvoiceTableModule } from './invoice-table/invoice-table.module';
 import { HomeComponent } from './home/home.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +14,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    InvoiceTableModule
+    InvoiceTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
