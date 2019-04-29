@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Row } from 'src/app/row';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: '[app-in-thead]',
@@ -9,14 +11,18 @@ export class InTheadComponent implements OnInit {
 
   @Input() settings: any;
 
-  constructor() { }
+  row : Row;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    for(let key in this.settings.columns){
-      console.log(key);
-      console.log(this.settings.columns[key].title)
-    }
   }
+
+  newRow(e){
+    this.row=e;
+  }
+
 
   keyDescOrder = (a, b): number => {
     return 1;

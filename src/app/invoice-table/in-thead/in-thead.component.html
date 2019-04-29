@@ -3,10 +3,15 @@
       <app-in-title [item]="item"></app-in-title>
     </th>
 </tr>
-<!-- <tr >
-    <th *ngFor="let item of settings.columns | keyvalue : keyDescOrder" >
-      <div *ngIf="item.value.title.length>0">
-        <input >
-      </div>
-    </th>
-</tr> -->
+<tr >
+  <ng-container  *ngIf="row" >
+  <td *ngFor="let item of row.cells">
+    <app-in-cell [cell]="item" [editing]="row.isEditing">
+    </app-in-cell>
+  </td>
+  </ng-container >
+  <td>
+    <app-in-add (newRow)="newRow($event)">
+    </app-in-add>
+  </td>
+</tr>

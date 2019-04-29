@@ -13,7 +13,11 @@ export class InPageComponent implements OnInit {
   constructor(private dataService : DataService) { }
 
   ngOnInit() {
-    this.pagesetting = this.dataService.getPages();
+    this.pagesetting = this.dataService.getPagesSetting();
+  }
+
+  getPage(){
+    return this.pagesetting.pageIndex;
   }
 
   arrayOne(n: number): any[] {

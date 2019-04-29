@@ -4,6 +4,7 @@ import { InvoiceTableComponent } from './invoice-table.component';
 import { InTbodyModule } from './in-tbody/in-tbody.module';
 import { InTheadModule } from './in-thead/in-thead.module';
 import { InPageModule } from './in-page/in-page.module';
+import { InFilterModule } from './in-filter/in-filter.module';
 
 @NgModule({
   declarations: [InvoiceTableComponent],
@@ -11,7 +12,8 @@ import { InPageModule } from './in-page/in-page.module';
     CommonModule,
     InTbodyModule,
     InTheadModule,
-    InPageModule
+    InPageModule,
+    InFilterModule
   ],
   exports:[InvoiceTableComponent]
 })

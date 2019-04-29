@@ -1,7 +1,8 @@
 <div *ngIf="!editing">
-  <button (click)="edit()">edit</button>
-  <button (click)="delete()">delete</button>
+  <button (click)="edit()">Edit</button>
+  <button (click)="delete()">Delete</button>
 </div>
 <div *ngIf="editing">
-  <button (click)="done()">update</button>
+  <button (click)="done()">Update</button>
+  <button (click)="cancel()">Cancel</button>
 </div>

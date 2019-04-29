@@ -29,6 +29,13 @@ export class InEditDeleteComponent implements OnInit {
   }
 
   done(){
+    if(this.dataService.saveEdit(this.row))
+    {
+      this.editing = false;
+    }
+  }
+
+  cancel(){
     this.editing = false;
     this.dataService.cancelEdit(this.row);
   }

@@ -1,0 +1,15 @@
+
+<div *ngIf="!editing || !cell.editable">
+  <span *ngIf="cell.type=='idstring'">{{cell.value}}</span>
+  <span *ngIf="cell.type=='string'">{{cell.value}}</span>
+  <span *ngIf="cell.type=='date'">{{cell.value | date: 'dd/MM/yyyy' }}</span>
+</div>
+<div *ngIf="editing && cell.editable">
+  <input [(ngModel)]="cell.newValue" *ngIf="cell.type=='string'" [formControl]="newValueControl">
+  <input *ngIf="cell.type=='date'" type="date" name="trip-start" [ngModel]="cell.newValue | date:'yyyy-MM-dd'" (ngModelChange)="cell.newValue = $event" >
+</div>
+
+<div *ngIf="editing && cell.editable && cell.type=='string' && cell.errorMessage" class="alert">
+    {{cell.errorMessage}}
+</div>
+

@@ -1,7 +1,6 @@
-import { DataFormat } from './dataFormat';
-
+import { Cell } from './cell';
 
 export class Row {
-  data: DataFormat;
+  cells: any;
   isEditing : boolean;
 }

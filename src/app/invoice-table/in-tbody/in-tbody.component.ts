@@ -11,16 +11,9 @@ export class InTbodyComponent implements OnInit {
   @Input() data : any;
 
   constructor(private dataService : DataService) {
-
   }
 
   ngOnInit() {
-
   }
-
-  keyDescOrder = (a, b): number => {
-    return 1;
-  }
-
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './../data.service';
+import { SourceService } from './../source.service';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +8,22 @@ import { DataService } from './../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  data = [];
-  settings : Object ;
 
-  constructor(private dataService : DataService) { }
 
+  source;
+  settings;
+
+  constructor(private sourceService : SourceService) {}
 
   ngOnInit() {
     this.getData();
   }
 
   getData(): void {
-    this.dataService.getInvoices()
-        .subscribe(invoices => this.data = invoices);
+    this.sourceService.getInvoices()
+        .subscribe(source => this.source = source);
 
-   this.dataService.getSetting()
+   this.sourceService.getSetting()
         .subscribe(settings => this.settings = settings);
   }
 

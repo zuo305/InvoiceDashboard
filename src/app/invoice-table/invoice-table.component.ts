@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from './../data.service';
 
 @Component({
   selector: 'app-invoice-table',
@@ -7,12 +8,28 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InvoiceTableComponent implements OnInit {
 
-  @Input() data: any;
-  @Input() settings: Object ;
+  @Input() source;
+  @Input() settings ;
 
-  constructor() { }
+  data;
+
+  constructor(private dataService : DataService) { }
+
+  getData()
+  {
+    this.dataService.getData()
+        .subscribe(data => this.data = data);
+
+  }
 
   ngOnInit() {
+    this.dataService.generatorData(this.source,this.settings);
+
+
+    this.dataService.onChanged().subscribe(() => {
+      this.getData();
+        });
+
   }
 
 }

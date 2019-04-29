@@ -17,7 +17,7 @@ export class InTitleComponent implements OnInit {
 
 
   ngOnInit() {
-      this.dataService.onSortChanged().subscribe((key) => {
+      this.dataService.onSortSwitch().subscribe((key) => {
         if (key === this.item.key) {
         } else {
           this.currentSort = '';
@@ -38,7 +38,7 @@ export class InTitleComponent implements OnInit {
 
   sort(){
     this.changeSortDirect();
-    this.dataService.sort(this.item,this.currentSort);
+    this.dataService.setSortCondition(this.item,this.currentSort);
   }
 
 }
