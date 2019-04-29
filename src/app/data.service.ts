@@ -117,7 +117,7 @@ export class DataService {
 
   //validation
   validate(row){
-    var regex = RegExp('^[a-zA-Z0-9]+$');
+    var regex = RegExp('^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$');
     for(let key in this.settings.columns)
     {
       if(this.settings.columns[key].title.length>0)

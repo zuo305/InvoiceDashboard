@@ -5,7 +5,7 @@
   <span *ngIf="cell.type=='date'">{{cell.value | date: 'dd/MM/yyyy' }}</span>
 </div>
 <div *ngIf="editing && cell.editable">
-  <input [(ngModel)]="cell.newValue" *ngIf="cell.type=='string'" [formControl]="newValueControl">
+  <input [(ngModel)]="cell.newValue" *ngIf="cell.type=='string'" >
   <input *ngIf="cell.type=='date'" type="date" name="trip-start" [ngModel]="cell.newValue | date:'yyyy-MM-dd'" (ngModelChange)="cell.newValue = $event" >
 </div>
 
