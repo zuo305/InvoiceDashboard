@@ -11,16 +11,16 @@ Run `npm install` to install package.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ##  Features:
-a)	Delete row
-b)	Edit row
-c)	Add a new row
-d)	Sort
-e)	Filter by comment
-f)	Invoice number read only (automated)
-g)	Date (automated)
-h)	Validation of comment
-i)	Paginate
-j)	Date and comment are editable
+1)	Delete row
+2)	Edit row
+3)	Add a new row
+4)	Sort
+5)	Filter by comment
+6)	Invoice number read only (automated)
+7)	Date (automated)
+8)	Validation of comment
+9)	Paginate
+10)	Date and comment are editable
     
 
 ## Core design:
