@@ -10,6 +10,28 @@ Run `npm install` to install package.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+##  Features:
+a)	Delete row
+b)	Edit row
+c)	Add a new row
+d)	Sort
+e)	Filter by comment
+f)	Invoice number read only (automated)
+g)	Date (automated)
+h)	Validation of comment
+i)	Paginate
+j)	Date and comment are editable
+    
+
+## Core design:
+1.	Hand written everything
+2.	mock-source.ts  :  mock data source and  setting
+3.	data.service.ts :  state manager and data process
+    a)	read source then convert source to “Row” array.
+    b)	Table subscribe the change event, so once sort, filter, delete event happened,   table will got the new data by “GetData” function
+4.	“Cell component” is share for adding row and editing row.
+
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
